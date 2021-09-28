@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla Weather App Metric JP</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/ea0aa74a16.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-app">
+ <header>今日の天気予報 </header>
+      <h1>渋川</h1>
+      <p class="time" id="time">1:00</p>
+      <small class="player" id="player"><iframe src="https://open.spotify.com/embed/playlist/6ouFe7c2VyLtHUcq3uIguP?theme=0" width="30%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe></small>
+      <h2>
+        <ul>
+          <li class="weekday" id="weekday">今日は木曜日</li>
+          <li class="humidity" id="humidity">湿度: 69%</li>
+          <li class="wind" id="wind">風速: 2km/h</li>
+          <li class="description" id="description">曇り</li>
+        </ul>
+        <img 
+        src="https://openweathermap.org/img/wn/10d@2x.png"
+        alt="Cloudy"
+        class="icon"
+        id="icon"></img>
+        <main class="current" id="actualDegree">29℃</main>
+      </h2>
+      <div class="weather-forecast" id="forecast"></div>
+      <form id="search-form">
+        <input
+          type="search"
+          class="search"
+          id="searchInput"
+          placeholder="Enter your city"
+          autocomplete="off"
+          autofocus="on"
+        />
+        <button type="submit" class="btn btn-primary">探す</button>
+
+        <button
+          type="button"
+          class="btn btn-success"
+          id="current-location-button"
+        >
+          現在位置
+        </button>
+
+        <sup
+          ><span
+            id="celsius"
+            button
+            type="button"
+            class="btn btn-secondary btn-lg"
+            >°C</span
+          >
+          <span id="fahrenheit" type="button" class="btn btn-warning btn-lg"
+            >°F</span
+          ></sup
+        >
+      </form>
+      <p class="info">
+        このページは、
+        <a href="https://github.com/KpopMama07/Vanilla-Weather-App" target="_blank"
+          >オープンソースコード</a
+        >を使用して、
+          <a
+            href="https://www.linkedin.com/in/jasmine-tsunoda89/?locale=ja_JP"
+            target="_blank"
+          >
+            角田ジャスミン
+          </a>
+          によって作成およびコーディングされました。
+      </p>
+      </div>
+    </div>
+    <script src="src/app.js"></script>
+  </body>
+</html>

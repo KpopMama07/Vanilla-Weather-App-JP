@@ -83,6 +83,7 @@ function search(event) {
     searchCity(searchInput.value);
 
     searchInput.value = "";
+  }
 }
 
 let form = document.querySelector("#search-form");

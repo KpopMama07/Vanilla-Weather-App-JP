@@ -79,7 +79,7 @@ function search(event) {
   if (searchInput.value === "") {
     h1.innerHTML = "#searchInput";
   } else {
-    h1.innerHTML = "あなたの市に入ってください！";
+    h1.innerHTML = "あなたの地域を入力！";
     searchCity(searchInput.value);
 
     searchInput.value = "";
